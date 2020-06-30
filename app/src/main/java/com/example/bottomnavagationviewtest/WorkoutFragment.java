@@ -26,6 +26,9 @@ public class WorkoutFragment extends Fragment {
     private CardView fourthNewspaper;
     private CardView fifthNewspaper;
     private CardView sixthNewspaper;
+    private  CardView seventhNewspaper;
+    private  CardView eighthNewspaper;
+
 
     @Nullable
     @Override
@@ -37,6 +40,8 @@ public class WorkoutFragment extends Fragment {
         fourthNewspaper = root.findViewById(R.id.fourth_newspaper);
         fifthNewspaper = root.findViewById(R.id.fifth_newspaper);
         sixthNewspaper = root.findViewById(R.id.sixth_newspaper);
+        seventhNewspaper = root.findViewById(R.id.seventh_newspaper);
+        eighthNewspaper = root.findViewById(R.id.eighth_newspaper);
 
 //        View root = inflater.inflate(R.layout.fragment_home, container, false);
 //        historyButton = root.findViewById(R.id.historyButton);
@@ -76,7 +81,7 @@ public class WorkoutFragment extends Fragment {
         fourthNewspaper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coachmag.co.uk/full-body-workouts/6960/six-week-strength-training-workout-plan"));
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.cnn.com/health"));
                 startActivity(browser);
             }
         });
@@ -84,7 +89,7 @@ public class WorkoutFragment extends Fragment {
         fifthNewspaper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.marketwatch.com/story/a-panel-of-25-medical-and-health-professionals-name-the-best-diet-for-2020-and-the-worst-2020-01-02"));
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.myfitnesspal.com/5-best-exercises-for-fat-loss-ranked/"));
                 startActivity(browser);
             }
         });
@@ -92,10 +97,28 @@ public class WorkoutFragment extends Fragment {
         sixthNewspaper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/playlist?list=PLnfcpZm6el8gpyIi4gP-vk5kQ4J9NY55e"));
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.coachmag.co.uk/full-body-workouts/6960/six-week-strength-training-workout-plan"));
                 startActivity(browser);
             }
         });
+
+        seventhNewspaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/playlist?list=PLfj4lZyPiNakYgymIbJTGcoNXnrnk8yls"));
+                startActivity(browser);
+            }
+        });
+
+        eighthNewspaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=2bQ0MJL9mZI&list=PLEDBB97DCA7B48E58"));
+                startActivity(browser);
+            }
+        });
+
+
 
         return root;
     }
